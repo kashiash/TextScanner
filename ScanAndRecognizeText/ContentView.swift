@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  ScanAndRecognizeText
-//
-//  Created by Gabriel Theodoropoulos.
-//
+
 
 import SwiftUI
 
@@ -16,7 +11,7 @@ struct ContentView: View {
         NavigationView {
             ZStack(alignment: .bottom) {
                 List(recognizedContent.items, id: \.id) { textItem in
-                    NavigationLink(destination: TextPreviewView(text: textItem.text)) {
+                    NavigationLink(destination: TextPreviewView(vm: textItem)) {
                         Text(String(textItem.text.prefix(50)).appending("..."))
                     }
                 }

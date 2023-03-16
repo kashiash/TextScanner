@@ -1,9 +1,4 @@
-//
-//  ScanAndRecognizeTextApp.swift
-//  ScanAndRecognizeText
-//
-//  Created by Gabriel Theodoropoulos.
-//
+
 
 import SwiftUI
 

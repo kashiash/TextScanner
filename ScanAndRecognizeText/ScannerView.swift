@@ -1,9 +1,4 @@
-//
-//  ScannerView.swift
-//  ScanAndRecognizeText
-//
-//  Created by Gabriel Theodoropoulos.
-//
+
 
 import SwiftUI
 import VisionKit

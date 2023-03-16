@@ -1,9 +1,4 @@
-//
-//  TextRecognition.swift
-//  ScanAndRecognizeText
-//
-//  Created by Gabriel Theodoropoulos.
-//
+
 
 import SwiftUI
 import Vision
@@ -24,6 +19,7 @@ struct TextRecognition {
                 
                 do {
                     let textItem = TextItem()
+                    textItem.image = image
                     try requestHandler.perform([getTextRecognitionRequest(with: textItem)])
                     
                     DispatchQueue.main.async {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2E736229C3BC4F00CA4939 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E736129C3BC4F00CA4939 /* ZoomableScrollView.swift */; };
 		C068CD8D25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068CD8C25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift */; };
 		C068CD8F25EAB787001C5AA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068CD8E25EAB787001C5AA9 /* ContentView.swift */; };
 		C068CD9125EAB78A001C5AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C068CD9025EAB78A001C5AA9 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2E736129C3BC4F00CA4939 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
 		C068CD8925EAB787001C5AA9 /* ScanAndRecognizeText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanAndRecognizeText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C068CD8C25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAndRecognizeTextApp.swift; sourceTree = "<group>"; };
 		C068CD8E25EAB787001C5AA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				C068CD9025EAB78A001C5AA9 /* Assets.xcassets */,
 				C068CD9525EAB78A001C5AA9 /* Info.plist */,
 				C068CD9225EAB78A001C5AA9 /* Preview Content */,
+				3F2E736129C3BC4F00CA4939 /* ZoomableScrollView.swift */,
 			);
 			path = ScanAndRecognizeText;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2E736229C3BC4F00CA4939 /* ZoomableScrollView.swift in Sources */,
 				C068CDA625EAC098001C5AA9 /* Model.swift in Sources */,
 				C068CD8F25EAB787001C5AA9 /* ContentView.swift in Sources */,
 				C068CDA225EABAE0001C5AA9 /* ScannerView.swift in Sources */,
@@ -285,7 +289,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ScanAndRecognizeText/Preview Content\"";
-				DEVELOPMENT_TEAM = 9BTCAVN99V;
+				DEVELOPMENT_TEAM = PFVCA649R3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ScanAndRecognizeText/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -293,7 +297,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.ScanAndRecognizeText;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.ScanAndRecognizeText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,7 +311,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ScanAndRecognizeText/Preview Content\"";
-				DEVELOPMENT_TEAM = 9BTCAVN99V;
+				DEVELOPMENT_TEAM = PFVCA649R3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ScanAndRecognizeText/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -315,7 +319,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.ScanAndRecognizeText;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.ScanAndRecognizeText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

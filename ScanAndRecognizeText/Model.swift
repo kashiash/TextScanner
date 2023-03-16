@@ -1,15 +1,12 @@
-//
-//  Model.swift
-//  ScanAndRecognizeText
-//
-//  Created by Gabriel Theodoropoulos.
-//
+
 
 import Foundation
+import SwiftUI
 
-class TextItem: Identifiable {
+class TextItem: ObservableObject {
     var id: String
     var text: String = ""
+    var image: UIImage?
     
     init() {
         id = UUID().uuidString
