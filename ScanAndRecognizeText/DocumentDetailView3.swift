@@ -1,16 +1,15 @@
-//
-//  DocumentDetailView.swift
-//  ScanAndRecognizeText
-//
-//  Created by Jacek Kosiński G on 18/03/2023.
-//
+    //
+    //  DocumentDetailView.swift
+    //  ScanAndRecognizeText
+    //
+    //  Created by Jacek Kosiński G on 18/03/2023.
+    //
 
 import SwiftUI
 
-struct DocumentDetailView: View {
+struct DocumentDetailView3: View {
     @ObservedObject var recognizedDocument: DocumentItem
     
-    @StateObject private var cvm = CameraViewModel()
     
     @State private var showScanner = false
     
@@ -23,12 +22,31 @@ struct DocumentDetailView: View {
             }
             NavigationView {
                 
-                List{
-                        
-                    ImageSliderView(recognizedDocument: recognizedDocument)
-                        .frame(height: 800)
-                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                ScrollView(.horizontal){
+                    LazyHStack(spacing: 10){
+                        ForEach(recognizedDocument.pages, id: \.id) { textItem in
+                            NavigationLink(destination: TextPreviewView(vm: textItem)) {
+                                if let image = textItem.image {
+                                    
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(minWidth: 0, maxWidth: .infinity)
+                                    
+                                } else {
+                                    Image(systemName: "photo.fill")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .opacity(0.6)
+                                        .frame(minWidth: 0, maxWidth: .infinity)
+                                        .padding(.horizontal)
+                                }
+                            }
+                        }
+                    }
+                    .padding()
                 }
+                .frame(height: 800)
             }
             
             .navigationTitle("Text Document")
@@ -48,23 +66,8 @@ struct DocumentDetailView: View {
                 .background(Color(UIColor.systemIndigo))
                 .cornerRadius(18)
             }))
-            Spacer()
-            HStack {
-                Button {
-                    cvm.source = .camera
-                    cvm.showPhotoPicker()
-                } label: {
-                    Text("Camera")
-                }
-                Button {
-                    cvm.source = .library
-                    cvm.showPhotoPicker()
-                } label: {
-                    Text("Photos")
-                }
-            }
-           
         }
+        
         .sheet(isPresented: $showScanner, content: {
             ScannerView { result in
                 switch result {
@@ -73,7 +76,6 @@ struct DocumentDetailView: View {
                         for image in scannedImages {
                             let page = TextItem()
                             page.image = image
-                            page.pageNumber = recognizedDocument.pages.count + 1
                             recognizedDocument.pages.append(page)
                         }
                         
@@ -91,6 +93,7 @@ struct DocumentDetailView: View {
         
     }
 }
+
 
 
 

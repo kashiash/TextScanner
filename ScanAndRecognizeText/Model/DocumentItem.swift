@@ -3,15 +3,7 @@
 import Foundation
 import SwiftUI
 
-class TextItem: ObservableObject {
-    var id: String
-    var text: String = ""
-    var image: UIImage?
-    
-    init() {
-        id = UUID().uuidString
-    }
-}
+
 
 class DocumentItem: ObservableObject{
     var id:String
@@ -32,9 +24,7 @@ class DocumentItem: ObservableObject{
 }
 
 
-class RecognizedContent: ObservableObject {
-    @Published var items = [TextItem]()
-}
+
 
 class RecognizedDocument: ObservableObject {
     @Published var items = [DocumentItem]()

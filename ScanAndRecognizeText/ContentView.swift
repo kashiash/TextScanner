@@ -53,6 +53,7 @@ struct ContentView: View {
                             for image in scannedImages {
                                 let page = TextItem()
                                 page.image = image
+                                page.pageNumber = document.pages.count + 1
                                 document.pages.append(page)
                             }
                             recognizedDocument.items.append(document)
