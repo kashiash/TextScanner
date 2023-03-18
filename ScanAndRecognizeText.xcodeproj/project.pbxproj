@@ -9,15 +9,12 @@
 /* Begin PBXBuildFile section */
 		3F2E736229C3BC4F00CA4939 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E736129C3BC4F00CA4939 /* ZoomableScrollView.swift */; };
 		3F2E736429C5DF5900CA4939 /* DocumentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E736329C5DF5900CA4939 /* DocumentDetailView.swift */; };
-		3F2E738B29C6371900CA4939 /* DocumentDetailView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E738A29C6371900CA4939 /* DocumentDetailView2.swift */; };
-		3F2E738D29C6374100CA4939 /* DocumentDetailView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E738C29C6374100CA4939 /* DocumentDetailView3.swift */; };
 		3F2E738F29C637D800CA4939 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E738E29C637D800CA4939 /* ImageSliderView.swift */; };
 		3F2E739129C6488500CA4939 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E739029C6488500CA4939 /* CameraViewModel.swift */; };
 		3F2E739329C6499600CA4939 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E739229C6499600CA4939 /* ImagePicker.swift */; };
 		3F2E739529C64AAD00CA4939 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E739429C64AAD00CA4939 /* Picker.swift */; };
 		3F2E739829C64D5900CA4939 /* MediaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E739729C64D5900CA4939 /* MediaFile.swift */; };
 		3F2E739A29C64D7E00CA4939 /* TextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E739929C64D7E00CA4939 /* TextItem.swift */; };
-		3F2E739C29C65DF900CA4939 /* DocumentDetailView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E739B29C65DF900CA4939 /* DocumentDetailView4.swift */; };
 		3F2E739F29C661E800CA4939 /* PhotosPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E739E29C661E800CA4939 /* PhotosPickerModel.swift */; };
 		C068CD8D25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068CD8C25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift */; };
 		C068CD8F25EAB787001C5AA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068CD8E25EAB787001C5AA9 /* ContentView.swift */; };
@@ -32,15 +29,12 @@
 /* Begin PBXFileReference section */
 		3F2E736129C3BC4F00CA4939 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
 		3F2E736329C5DF5900CA4939 /* DocumentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailView.swift; sourceTree = "<group>"; };
-		3F2E738A29C6371900CA4939 /* DocumentDetailView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailView2.swift; sourceTree = "<group>"; };
-		3F2E738C29C6374100CA4939 /* DocumentDetailView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailView3.swift; sourceTree = "<group>"; };
 		3F2E738E29C637D800CA4939 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		3F2E739029C6488500CA4939 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		3F2E739229C6499600CA4939 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3F2E739429C64AAD00CA4939 /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		3F2E739729C64D5900CA4939 /* MediaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFile.swift; sourceTree = "<group>"; };
 		3F2E739929C64D7E00CA4939 /* TextItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextItem.swift; sourceTree = "<group>"; };
-		3F2E739B29C65DF900CA4939 /* DocumentDetailView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailView4.swift; sourceTree = "<group>"; };
 		3F2E739E29C661E800CA4939 /* PhotosPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerModel.swift; sourceTree = "<group>"; };
 		C068CD8925EAB787001C5AA9 /* ScanAndRecognizeText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanAndRecognizeText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C068CD8C25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAndRecognizeTextApp.swift; sourceTree = "<group>"; };
@@ -107,7 +101,6 @@
 				C068CD8C25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift */,
 				C068CD8E25EAB787001C5AA9 /* ContentView.swift */,
 				3F2E736329C5DF5900CA4939 /* DocumentDetailView.swift */,
-				3F2E738A29C6371900CA4939 /* DocumentDetailView2.swift */,
 				C068CD9C25EAB824001C5AA9 /* TextPreviewView.swift */,
 				C068CDA125EABAE0001C5AA9 /* ScannerView.swift */,
 				C068CDA825EAC9B7001C5AA9 /* TextRecognition.swift */,
@@ -115,12 +108,10 @@
 				C068CD9525EAB78A001C5AA9 /* Info.plist */,
 				C068CD9225EAB78A001C5AA9 /* Preview Content */,
 				3F2E736129C3BC4F00CA4939 /* ZoomableScrollView.swift */,
-				3F2E738C29C6374100CA4939 /* DocumentDetailView3.swift */,
 				3F2E738E29C637D800CA4939 /* ImageSliderView.swift */,
 				3F2E739029C6488500CA4939 /* CameraViewModel.swift */,
 				3F2E739229C6499600CA4939 /* ImagePicker.swift */,
 				3F2E739429C64AAD00CA4939 /* Picker.swift */,
-				3F2E739B29C65DF900CA4939 /* DocumentDetailView4.swift */,
 			);
 			path = ScanAndRecognizeText;
 			sourceTree = "<group>";
@@ -203,12 +194,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F2E739329C6499600CA4939 /* ImagePicker.swift in Sources */,
-				3F2E739C29C65DF900CA4939 /* DocumentDetailView4.swift in Sources */,
 				3F2E739F29C661E800CA4939 /* PhotosPickerModel.swift in Sources */,
 				3F2E736429C5DF5900CA4939 /* DocumentDetailView.swift in Sources */,
 				3F2E739829C64D5900CA4939 /* MediaFile.swift in Sources */,
 				3F2E736229C3BC4F00CA4939 /* ZoomableScrollView.swift in Sources */,
-				3F2E738B29C6371900CA4939 /* DocumentDetailView2.swift in Sources */,
 				C068CDA625EAC098001C5AA9 /* DocumentItem.swift in Sources */,
 				C068CD8F25EAB787001C5AA9 /* ContentView.swift in Sources */,
 				3F2E739129C6488500CA4939 /* CameraViewModel.swift in Sources */,
@@ -218,7 +207,6 @@
 				C068CD9D25EAB824001C5AA9 /* TextPreviewView.swift in Sources */,
 				C068CDA925EAC9B7001C5AA9 /* TextRecognition.swift in Sources */,
 				3F2E739A29C64D7E00CA4939 /* TextItem.swift in Sources */,
-				3F2E738D29C6374100CA4939 /* DocumentDetailView3.swift in Sources */,
 				C068CD8D25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
