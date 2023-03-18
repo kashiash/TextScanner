@@ -6,13 +6,36 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct DocumentDetailView: View {
+    
     @ObservedObject var recognizedDocument: DocumentItem
     
-    @StateObject private var cvm = CameraViewModel()
-    
     @State private var showScanner = false
+        
+    @State var selectedPhotos: [PhotosPickerItem] = []
+    
+    func processPhoto(photo: PhotosPickerItem){
+
+        photo.loadTransferable(type: Data.self) { result in
+            DispatchQueue.main.async {
+                switch result {
+                    case .success(let data):
+                        if let data, let image = UIImage(data: data){
+                            //self.loadedImages.append(.init(image: Image(uiImage: image), data: data))
+                            let page = TextItem()
+                            page.image = image
+                            recognizedDocument.pages.append(page)
+                        }
+                    case .failure(let failure):
+                        print(failure)
+                }
+            }
+        }
+    }
+    
+    
     
     var body: some View {
         VStack{
@@ -23,46 +46,50 @@ struct DocumentDetailView: View {
             }
             NavigationView {
                 
-                List{
+                TabView{
+                    ForEach(recognizedDocument.pages, id: \.id ){ page in
                         
-                    ImageSliderView(recognizedDocument: recognizedDocument)
-                        .frame(height: 800)
-                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        if let image = page.image {
+                            
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                            
+                        } else {
+                            Image(systemName: "photo.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .opacity(0.6)
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .padding(.horizontal)
+                        }
+                        
+                    }
+                }
+                .tabViewStyle(.page)
+                .frame(height: 650)
+            }
+            .onChange(of: selectedPhotos) { pickerItems in
+                for photo in pickerItems{
+                    processPhoto(photo: photo)
                 }
             }
-            
             .navigationTitle("Text Document")
+            .toolbar {
+
+                PhotosPicker(selection: $selectedPhotos, matching: .any(of: [.images]),photoLibrary: .shared()) {
+                    Image(systemName: "photo.on.rectangle.angled")
+                        .font(.callout)
+                }
+            }
             .navigationBarItems(trailing: Button(action: {
                 showScanner = true
             }, label: {
-                HStack {
                     Image(systemName: "doc.text.viewfinder")
-                        .renderingMode(.template)
-                        .foregroundColor(.white)
-                    
-                    Text("Scan")
-                        .foregroundColor(.white)
-                }
-                .padding(.horizontal, 16)
-                .frame(height: 36)
-                .background(Color(UIColor.systemIndigo))
-                .cornerRadius(18)
+                        .font(.callout)
             }))
-            Spacer()
-            HStack {
-                Button {
-                    cvm.source = .camera
-                    cvm.showPhotoPicker()
-                } label: {
-                    Text("Camera")
-                }
-                Button {
-                    cvm.source = .library
-                    cvm.showPhotoPicker()
-                } label: {
-                    Text("Photos")
-                }
-            }
+
            
         }
         .sheet(isPresented: $showScanner, content: {
@@ -90,6 +117,7 @@ struct DocumentDetailView: View {
         })
         
     }
+    
 }
 
 

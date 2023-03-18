@@ -10,7 +10,7 @@ class DocumentItem: ObservableObject{
     var name: String = "Scaned document"
     var text: String = ""
     var createDate: Date
-    var pages: [TextItem]
+    @Published  var pages: [TextItem]
     
     init(){
         id = UUID().uuidString

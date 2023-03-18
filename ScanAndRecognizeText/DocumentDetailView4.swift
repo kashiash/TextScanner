@@ -1,7 +1,7 @@
 //
 //  DocumentDetailView4.swift
 //  ScanAndRecognizeText
-/Users/jkosinski/Desktop/TextScanner/ScanAndRecognizeText/DocumentDetailView.swift//
+//
 //  Created by Jacek Kosiński G on 18/03/2023.
 //
 
