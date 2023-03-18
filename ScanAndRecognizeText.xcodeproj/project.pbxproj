@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F2E736229C3BC4F00CA4939 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E736129C3BC4F00CA4939 /* ZoomableScrollView.swift */; };
+		3F2E736429C5DF5900CA4939 /* DocumentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E736329C5DF5900CA4939 /* DocumentDetailView.swift */; };
 		C068CD8D25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068CD8C25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift */; };
 		C068CD8F25EAB787001C5AA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068CD8E25EAB787001C5AA9 /* ContentView.swift */; };
 		C068CD9125EAB78A001C5AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C068CD9025EAB78A001C5AA9 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		3F2E736129C3BC4F00CA4939 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
+		3F2E736329C5DF5900CA4939 /* DocumentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailView.swift; sourceTree = "<group>"; };
 		C068CD8925EAB787001C5AA9 /* ScanAndRecognizeText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanAndRecognizeText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C068CD8C25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAndRecognizeTextApp.swift; sourceTree = "<group>"; };
 		C068CD8E25EAB787001C5AA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				C068CD8C25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift */,
 				C068CD8E25EAB787001C5AA9 /* ContentView.swift */,
+				3F2E736329C5DF5900CA4939 /* DocumentDetailView.swift */,
 				C068CD9C25EAB824001C5AA9 /* TextPreviewView.swift */,
 				C068CDA525EAC098001C5AA9 /* Model.swift */,
 				C068CDA125EABAE0001C5AA9 /* ScannerView.swift */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2E736429C5DF5900CA4939 /* DocumentDetailView.swift in Sources */,
 				3F2E736229C3BC4F00CA4939 /* ZoomableScrollView.swift in Sources */,
 				C068CDA625EAC098001C5AA9 /* Model.swift in Sources */,
 				C068CD8F25EAB787001C5AA9 /* ContentView.swift in Sources */,
@@ -292,7 +296,8 @@
 				DEVELOPMENT_TEAM = PFVCA649R3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ScanAndRecognizeText/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +319,8 @@
 				DEVELOPMENT_TEAM = PFVCA649R3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ScanAndRecognizeText/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -3,30 +3,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var recognizedContent = RecognizedContent()
+
+    @ObservedObject var recognizedDocument = RecognizedDocument()
+    
+    
     @State private var showScanner = false
-    @State private var isRecognizing = false
     
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
-                List(recognizedContent.items, id: \.id) { textItem in
-                    NavigationLink(destination: TextPreviewView(vm: textItem)) {
-                        Text(String(textItem.text.prefix(50)).appending("..."))
+                List(recognizedDocument.items, id: \.id) { documentItem in
+                    NavigationLink(destination: DocumentDetailView(recognizedDocument: documentItem)) {
+                        Text(String(documentItem.text.prefix(50)).appending("..."))
+                        Text(String(documentItem.name))
+                        
+                        Text(String(documentItem.viewCreateDate))
                     }
+                    .contentShape(Rectangle())
+                    
                 }
-                
-                
-                if isRecognizing {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle(tint: Color(UIColor.systemIndigo)))
-                        .padding(.bottom, 20)
-                }
-                
+
             }
-            .navigationTitle("Text Scanner")
+            .navigationTitle("Scanned documents")
             .navigationBarItems(trailing: Button(action: {
-                guard !isRecognizing else { return }
                 showScanner = true
             }, label: {
                 HStack {
@@ -42,20 +41,23 @@ struct ContentView: View {
                 .background(Color(UIColor.systemIndigo))
                 .cornerRadius(18)
             }))
+            .navigationBarItems(leading: addButton)
         }
         .sheet(isPresented: $showScanner, content: {
             ScannerView { result in
                 switch result {
                     case .success(let scannedImages):
-                        isRecognizing = true
-                        
-                        TextRecognition(scannedImages: scannedImages,
-                                        recognizedContent: recognizedContent) {
-                            // Text recognition is finished, hide the progress indicator.
-                            isRecognizing = false
+
+                        if scannedImages.count > 0 {
+                            let document = DocumentItem()
+                            for image in scannedImages {
+                                let page = TextItem()
+                                page.image = image
+                                document.pages.append(page)
+                            }
+                            recognizedDocument.items.append(document)
                         }
-                        .recognizeText()
-                        
+
                     case .failure(let error):
                         print(error.localizedDescription)
                 }
@@ -63,10 +65,23 @@ struct ContentView: View {
                 showScanner = false
                 
             } didCancelScanning: {
-                // Dismiss the scanner controller and the sheet.
+                    // Dismiss the scanner controller and the sheet.
                 showScanner = false
             }
         })
+    }
+    
+    var addButton: some View {
+        Button(action: {
+            addNewDocument()
+        }, label: {
+            Image(systemName: "plus.circle")
+        })
+    }
+    
+    func addNewDocument() {
+        let newObject = DocumentItem()
+        recognizedDocument.items.append(newObject)
     }
 }
 

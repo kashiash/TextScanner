@@ -15,18 +15,27 @@ class TextItem: ObservableObject {
 
 class DocumentItem: ObservableObject{
     var id:String
-    var name: String = "Scaned docuemnt"
+    var name: String = "Scaned document"
+    var text: String = ""
     var createDate: Date
     var pages: [TextItem]
     
     init(){
         id = UUID().uuidString
-        createDate = Date.now()
+        createDate = .now
         pages = [TextItem]()
+    }
+    
+    var viewCreateDate: String {
+        createDate.formatted(date: .numeric, time: .omitted) 
     }
 }
 
 
 class RecognizedContent: ObservableObject {
     @Published var items = [TextItem]()
+}
+
+class RecognizedDocument: ObservableObject {
+    @Published var items = [DocumentItem]()
 }
