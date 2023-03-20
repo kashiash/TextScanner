@@ -24,7 +24,7 @@ struct ContentView: View {
                 }
 
             }
-            .navigationTitle("Scanned documents")
+            .navigationTitle("Documents")
             .navigationBarItems(trailing: Button(action: {
                 showScanner = true
             }, label: {
